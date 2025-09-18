@@ -4,130 +4,262 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Spring Boot REST Service</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .nav {
-            background: #007bff;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .nav a {
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: bold;
+            padding: 60px 0;
         }
-        .nav a:hover {
-            text-decoration: underline;
+        .tech-card {
+            transition: transform 0.2s;
         }
-        .feature {
-            background: #e9ecef;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 15px 0;
-            border-left: 4px solid #28a745;
-        }
-        .tech-stack {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .tech-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            border: 1px solid #dee2e6;
+        .tech-card:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav">
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/greeting">API</a>
-        </div>
-
-        <h1>About This Application</h1>
-        <p>This is a Spring Boot REST service built with modern web technologies and deployed to the cloud.</p>
-
-        <div class="feature">
-            <h3>🚀 What This App Does</h3>
-            <ul>
-                <li><strong>REST API:</strong> Provides greeting endpoints that return JSON data</li>
-                <li><strong>Web Interface:</strong> Beautiful web pages built with Thymeleaf templates</li>
-                <li><strong>Cross-Origin Support:</strong> Can be used by any frontend application</li>
-                <li><strong>Cloud Deployed:</strong> Running on AWS with SSL encryption</li>
-            </ul>
-        </div>
-
-        <div class="feature">
-            <h3>🔧 Technical Features</h3>
-            <ul>
-                <li><strong>Spring Boot 3.5.5:</strong> Modern Java framework</li>
-                <li><strong>Thymeleaf:</strong> Server-side template engine</li>
-                <li><strong>Gradle:</strong> Build automation tool</li>
-                <li><strong>Nginx:</strong> Reverse proxy and SSL termination</li>
-                <li><strong>Supervisor:</strong> Process management and auto-restart</li>
-            </ul>
-        </div>
-
-        <div class="tech-stack">
-            <div class="tech-item">
-                <h4>Java 17</h4>
-                <p>Programming Language</p>
-            </div>
-            <div class="tech-item">
-                <h4>Spring Boot</h4>
-                <p>Application Framework</p>
-            </div>
-            <div class="tech-item">
-                <h4>Thymeleaf</h4>
-                <p>Template Engine</p>
-            </div>
-            <div class="tech-item">
-                <h4>Nginx</h4>
-                <p>Web Server</p>
-            </div>
-            <div class="tech-item">
-                <h4>AWS</h4>
-                <p>Cloud Platform</p>
-            </div>
-            <div class="tech-item">
-                <h4>GitHub</h4>
-                <p>Version Control</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-rocket-takeoff"></i> Spring Boot API
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/greeting">API</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <div class="feature">
-            <h3>🌐 Live Endpoints</h3>
-            <p>This application is currently running at:</p>
-            <ul>
-                <li><strong>Website:</strong> <a href="https://springboot.mitchmunoz.com">https://springboot.mitchmunoz.com</a></li>
-                <li><strong>API:</strong> <a href="https://springboot.mitchmunoz.com/greeting">https://springboot.mitchmunoz.com/greeting</a></li>
-                <li><strong>Source Code:</strong> <a href="https://github.com/MitchellMunoz/springboot">GitHub Repository</a></li>
-            </ul>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">
+                <i class="bi bi-info-circle"></i> About This Application
+            </h1>
+            <p class="lead">A Spring Boot REST service built with modern web technologies and deployed to the cloud.</p>
         </div>
-
-        <hr style="margin: 30px 0;">
-        <p style="text-align: center; color: #6c757d;">
-            Built with ❤️ using Spring Boot and Thymeleaf
-        </p>
     </div>
+
+    <div class="container my-5">
+        <!-- What This App Does -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <i class="bi bi-rocket-takeoff text-primary"></i> What This App Does
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        <strong>REST API:</strong> Provides greeting endpoints that return JSON data
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        <strong>Web Interface:</strong> Beautiful web pages built with Thymeleaf templates
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        <strong>Cross-Origin Support:</strong> Can be used by any frontend application
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                        <strong>Cloud Deployed:</strong> Running on AWS with SSL encryption
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Features -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <i class="bi bi-gear text-primary"></i> Technical Features
+                        </h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-java text-warning me-2"></i>
+                                        <strong>Spring Boot 3.5.5:</strong> Modern Java framework
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-file-code text-info me-2"></i>
+                                        <strong>Thymeleaf:</strong> Server-side template engine
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-tools text-secondary me-2"></i>
+                                        <strong>Gradle:</strong> Build automation tool
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-server text-success me-2"></i>
+                                        <strong>Nginx:</strong> Reverse proxy and SSL termination
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-arrow-repeat text-primary me-2"></i>
+                                        <strong>Supervisor:</strong> Process management and auto-restart
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-bootstrap text-purple me-2"></i>
+                                        <strong>Bootstrap 5:</strong> Responsive UI framework
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h3 class="text-center mb-4">
+                    <i class="bi bi-stack"></i> Technology Stack
+                </h3>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4 col-sm-6">
+                <div class="card tech-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-java display-4 text-warning mb-3"></i>
+                        <h5 class="card-title">Java 17</h5>
+                        <p class="card-text">Programming Language</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card tech-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-spring display-4 text-success mb-3"></i>
+                        <h5 class="card-title">Spring Boot</h5>
+                        <p class="card-text">Application Framework</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card tech-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-file-code display-4 text-info mb-3"></i>
+                        <h5 class="card-title">Thymeleaf</h5>
+                        <p class="card-text">Template Engine</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card tech-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-server display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Nginx</h5>
+                        <p class="card-text">Web Server</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card tech-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-cloud display-4 text-warning mb-3"></i>
+                        <h5 class="card-title">AWS</h5>
+                        <p class="card-text">Cloud Platform</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="card tech-card h-100 text-center">
+                    <div class="card-body">
+                        <i class="bi bi-github display-4 text-dark mb-3"></i>
+                        <h5 class="card-title">GitHub</h5>
+                        <p class="card-text">Version Control</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Endpoints -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <i class="bi bi-globe text-primary"></i> Live Endpoints
+                        </h3>
+                        <p class="card-text">This application is currently running at:</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="d-grid">
+                                    <a href="https://springboot.mitchmunoz.com" class="btn btn-outline-primary">
+                                        <i class="bi bi-house"></i> Website
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-grid">
+                                    <a href="https://springboot.mitchmunoz.com/greeting" class="btn btn-outline-success">
+                                        <i class="bi bi-link-45deg"></i> API
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-grid">
+                                    <a href="https://github.com/MitchellMunoz/springboot" class="btn btn-outline-dark">
+                                        <i class="bi bi-github"></i> Source Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <hr>
+                <p class="text-muted">
+                    <i class="bi bi-heart-fill text-danger"></i> Built with love using Spring Boot, Thymeleaf, and Bootstrap
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
